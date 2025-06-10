@@ -2590,11 +2590,6 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
     line-height: var(--tw-leading, var(--text-sm--line-height, calc(1.25 / 0.875)));
   }
 }
-.xl\:my-6 {
-  @media (width >= 80rem) {
-    margin-block: calc(var(--spacing, 0.25rem) * 6);
-  }
-}
 .xl\:my-8 {
   @media (width >= 80rem) {
     margin-block: calc(var(--spacing, 0.25rem) * 8);
@@ -2689,6 +2684,12 @@ body {
   color: var(--color-stone-800, oklch(26.8% 0.007 34.298));
   font-family: "tablet-gothic", sans-serif;
   font-weight: 200;
+}
+h2 {
+  padding-top: calc(var(--spacing, 0.25rem) * 8);
+  padding-bottom: calc(var(--spacing, 0.25rem) * 6);
+  font-size: var(--text-3xl, 1.875rem);
+  line-height: var(--tw-leading, var(--text-3xl--line-height, calc(2.25 / 1.875)));
 }
 .text-rift {
   font-family: "rift", sans-serif;
