@@ -319,9 +319,6 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .my-4 {
   margin-block: calc(var(--spacing, 0.25rem) * 4);
 }
-.my-6 {
-  margin-block: calc(var(--spacing, 0.25rem) * 6);
-}
 .mt-8 {
   margin-top: calc(var(--spacing, 0.25rem) * 8);
 }
@@ -1618,17 +1615,11 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .p-3 {
   padding: calc(var(--spacing, 0.25rem) * 3);
 }
-.p-4 {
-  padding: calc(var(--spacing, 0.25rem) * 4);
-}
 .p-6 {
   padding: calc(var(--spacing, 0.25rem) * 6);
 }
 .p-8 {
   padding: calc(var(--spacing, 0.25rem) * 8);
-}
-.p-10 {
-  padding: calc(var(--spacing, 0.25rem) * 10);
 }
 .px-2 {
   padding-inline: calc(var(--spacing, 0.25rem) * 2);
@@ -1657,8 +1648,8 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .py-2 {
   padding-block: calc(var(--spacing, 0.25rem) * 2);
 }
-.py-6 {
-  padding-block: calc(var(--spacing, 0.25rem) * 6);
+.py-8 {
+  padding-block: calc(var(--spacing, 0.25rem) * 8);
 }
 .py-\[0\.2rem\] {
   padding-block: 0.2rem;
@@ -1741,10 +1732,6 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .text-base {
   font-size: var(--text-base, 1rem);
   line-height: var(--tw-leading, var(--text-base--line-height, calc(1.5 / 1)));
-}
-.text-lg {
-  font-size: var(--text-lg, 1.125rem);
-  line-height: var(--tw-leading, var(--text-lg--line-height, calc(1.75 / 1.125)));
 }
 .text-sm {
   font-size: var(--text-sm, 0.875rem);
@@ -2031,10 +2018,6 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
   --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
-.shadow-2xl {
-  --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
-  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-}
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -2061,12 +2044,6 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 }
 .shadow-initial {
   --tw-shadow-color: initial;
-}
-.shadow-stone-200 {
-  --tw-shadow-color: oklch(92.3% 0.003 48.717);
-  @supports (color: color-mix(in lab, red, red)) {
-    --tw-shadow-color: color-mix(in oklab, var(--color-stone-200, oklch(92.3% 0.003 48.717)) var(--tw-shadow-alpha), transparent);
-  }
 }
 .inset-shadow-initial {
   --tw-inset-shadow-color: initial;
@@ -2607,30 +2584,10 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
     }
   }
 }
-.md\:py-6 {
-  @media (width >= 48rem) {
-    padding-block: calc(var(--spacing, 0.25rem) * 6);
-  }
-}
 .md\:text-sm {
   @media (width >= 48rem) {
     font-size: var(--text-sm, 0.875rem);
     line-height: var(--tw-leading, var(--text-sm--line-height, calc(1.25 / 0.875)));
-  }
-}
-.lg\:max-w-3xl {
-  @media (width >= 64rem) {
-    max-width: var(--container-3xl, 48rem);
-  }
-}
-.lg\:p-10 {
-  @media (width >= 64rem) {
-    padding: calc(var(--spacing, 0.25rem) * 10);
-  }
-}
-.lg\:pt-8 {
-  @media (width >= 64rem) {
-    padding-top: calc(var(--spacing, 0.25rem) * 8);
   }
 }
 .xl\:my-6 {
@@ -2638,13 +2595,13 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
     margin-block: calc(var(--spacing, 0.25rem) * 6);
   }
 }
-.xl\:p-10 {
+.xl\:my-8 {
   @media (width >= 80rem) {
-    padding: calc(var(--spacing, 0.25rem) * 10);
+    margin-block: calc(var(--spacing, 0.25rem) * 8);
   }
 }
-.\32 xl\:p-10 {
-  @media (width >= 96rem) {
+.xl\:p-10 {
+  @media (width >= 80rem) {
     padding: calc(var(--spacing, 0.25rem) * 10);
   }
 }
@@ -2713,7 +2670,23 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
   font-family: "Ohm";
   src: url("https://use.typekit.net/jvb5bbk.css");
 }
+.container {
+  margin-inline: auto;
+  max-width: var(--container-3xl, 48rem);
+}
+.container.shadow {
+  --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  --tw-shadow-color: oklch(92.3% 0.003 48.717);
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-shadow-color: color-mix(in oklab, var(--color-stone-200, oklch(92.3% 0.003 48.717)) var(--tw-shadow-alpha), transparent);
+  }
+}
 body {
+  background-color: var(--color-white, #fff);
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji');
+  color: var(--color-stone-800, oklch(26.8% 0.007 34.298));
   font-family: "tablet-gothic", sans-serif;
   font-weight: 200;
 }
