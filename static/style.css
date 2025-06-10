@@ -1609,11 +1609,17 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .object-top-right {
   object-position: right top;
 }
+.p-0 {
+  padding: calc(var(--spacing, 0.25rem) * 0);
+}
 .p-1 {
   padding: calc(var(--spacing, 0.25rem) * 1);
 }
 .p-3 {
   padding: calc(var(--spacing, 0.25rem) * 3);
+}
+.p-4 {
+  padding: calc(var(--spacing, 0.25rem) * 4);
 }
 .p-6 {
   padding: calc(var(--spacing, 0.25rem) * 6);
@@ -2601,10 +2607,45 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
     }
   }
 }
+.md\:py-6 {
+  @media (width >= 48rem) {
+    padding-block: calc(var(--spacing, 0.25rem) * 6);
+  }
+}
 .md\:text-sm {
   @media (width >= 48rem) {
     font-size: var(--text-sm, 0.875rem);
     line-height: var(--tw-leading, var(--text-sm--line-height, calc(1.25 / 0.875)));
+  }
+}
+.lg\:max-w-3xl {
+  @media (width >= 64rem) {
+    max-width: var(--container-3xl, 48rem);
+  }
+}
+.lg\:p-10 {
+  @media (width >= 64rem) {
+    padding: calc(var(--spacing, 0.25rem) * 10);
+  }
+}
+.lg\:pt-8 {
+  @media (width >= 64rem) {
+    padding-top: calc(var(--spacing, 0.25rem) * 8);
+  }
+}
+.xl\:my-6 {
+  @media (width >= 80rem) {
+    margin-block: calc(var(--spacing, 0.25rem) * 6);
+  }
+}
+.xl\:p-10 {
+  @media (width >= 80rem) {
+    padding: calc(var(--spacing, 0.25rem) * 10);
+  }
+}
+.\32 xl\:p-10 {
+  @media (width >= 96rem) {
+    padding: calc(var(--spacing, 0.25rem) * 10);
   }
 }
 .dark\:aria-invalid\:focus-visible\:ring-4 {
