@@ -310,14 +310,26 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .mx-auto {
   margin-inline: auto;
 }
+.-my-30 {
+  margin-block: calc(var(--spacing, 0.25rem) * -30);
+}
 .my-1 {
   margin-block: calc(var(--spacing, 0.25rem) * 1);
 }
 .my-4 {
   margin-block: calc(var(--spacing, 0.25rem) * 4);
 }
+.my-6 {
+  margin-block: calc(var(--spacing, 0.25rem) * 6);
+}
 .mt-8 {
   margin-top: calc(var(--spacing, 0.25rem) * 8);
+}
+.mr-1 {
+  margin-right: calc(var(--spacing, 0.25rem) * 1);
+}
+.mr-1\.5 {
+  margin-right: calc(var(--spacing, 0.25rem) * 1.5);
 }
 .mb-8 {
   margin-bottom: calc(var(--spacing, 0.25rem) * 8);
@@ -436,6 +448,9 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .h-36 {
   height: calc(var(--spacing, 0.25rem) * 36);
 }
+.h-92 {
+  height: calc(var(--spacing, 0.25rem) * 92);
+}
 .h-\[var\(--radix-select-trigger-height\)\] {
   height: var(--radix-select-trigger-height);
 }
@@ -459,6 +474,9 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.w-2 {
+  width: calc(var(--spacing, 0.25rem) * 2);
 }
 .w-\[100px\] {
   width: 100px;
@@ -604,6 +622,12 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 }
 .scale-none {
   scale: none;
+}
+.rotate-45 {
+  rotate: 45deg;
+}
+.rotate-133 {
+  rotate: 133deg;
 }
 .rotate-none {
   rotate: none;
@@ -1060,6 +1084,9 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.overflow-clip {
+  overflow: clip;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1203,9 +1230,6 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .border-\[\#fbf0df\] {
   border-color: #fbf0df;
 }
-.border-red-300 {
-  border-color: var(--color-red-300, oklch(80.8% 0.114 19.571));
-}
 .bg-\[\#1a1a1a\] {
   background-color: #1a1a1a;
 }
@@ -1215,11 +1239,11 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .bg-\[\#fbf0df\] {
   background-color: #fbf0df;
 }
+.bg-red-400 {
+  background-color: var(--color-red-400, oklch(70.4% 0.191 22.216));
+}
 .bg-stone-100 {
   background-color: var(--color-stone-100, oklch(97% 0.001 106.424));
-}
-.bg-stone-200 {
-  background-color: var(--color-stone-200, oklch(92.3% 0.003 48.717));
 }
 .bg-transparent {
   background-color: transparent;
@@ -1627,6 +1651,9 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .py-2 {
   padding-block: calc(var(--spacing, 0.25rem) * 2);
 }
+.py-6 {
+  padding-block: calc(var(--spacing, 0.25rem) * 6);
+}
 .py-\[0\.2rem\] {
   padding-block: 0.2rem;
 }
@@ -1636,11 +1663,20 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .pt-6 {
   padding-top: calc(var(--spacing, 0.25rem) * 6);
 }
+.pt-8 {
+  padding-top: calc(var(--spacing, 0.25rem) * 8);
+}
 .pr-8 {
   padding-right: calc(var(--spacing, 0.25rem) * 8);
 }
+.pb-6 {
+  padding-bottom: calc(var(--spacing, 0.25rem) * 6);
+}
 .pl-2 {
   padding-left: calc(var(--spacing, 0.25rem) * 2);
+}
+.pl-5 {
+  padding-left: calc(var(--spacing, 0.25rem) * 5);
 }
 .text-center {
   text-align: center;
@@ -1699,6 +1735,10 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .text-base {
   font-size: var(--text-base, 1rem);
   line-height: var(--tw-leading, var(--text-base--line-height, calc(1.5 / 1)));
+}
+.text-lg {
+  font-size: var(--text-lg, 1.125rem);
+  line-height: var(--tw-leading, var(--text-lg--line-height, calc(1.75 / 1.125)));
 }
 .text-sm {
   font-size: var(--text-sm, 0.875rem);
@@ -1810,11 +1850,14 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .text-\[rgba\(255\,255\,255\,0\.87\)\] {
   color: rgba(255,255,255,0.87);
 }
-.text-black {
-  color: var(--color-black, #000);
+.text-red-400 {
+  color: var(--color-red-400, oklch(70.4% 0.191 22.216));
 }
-.text-red-500 {
-  color: var(--color-red-500, oklch(63.7% 0.237 25.331));
+.text-stone-100 {
+  color: var(--color-stone-100, oklch(97% 0.001 106.424));
+}
+.text-stone-800 {
+  color: var(--color-stone-800, oklch(26.8% 0.007 34.298));
 }
 .capitalize {
   text-transform: capitalize;
@@ -1982,6 +2025,10 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
   --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -2008,6 +2055,12 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 }
 .shadow-initial {
   --tw-shadow-color: initial;
+}
+.shadow-stone-200 {
+  --tw-shadow-color: oklch(92.3% 0.003 48.717);
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-shadow-color: color-mix(in oklab, var(--color-stone-200, oklch(92.3% 0.003 48.717)) var(--tw-shadow-alpha), transparent);
+  }
 }
 .inset-shadow-initial {
   --tw-inset-shadow-color: initial;
@@ -2620,9 +2673,17 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
   src: url("https://use.typekit.net/jvb5bbk.css");
 }
 body {
+  font-family: "tablet-gothic", sans-serif;
+  font-weight: 200;
+}
+.text-rift {
   font-family: "rift", sans-serif;
-  font-weight: 700;
   font-style: italic;
+}
+.text-kabel {
+  font-family: "neue-kabel", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 @property --tw-translate-x {
   syntax: "*";
