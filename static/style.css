@@ -2667,7 +2667,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 }
 .container {
   margin-inline: auto;
-  max-width: var(--container-3xl, 48rem);
+  max-width: var(--container-3xl, 62rem);
 }
 .container.shadow {
   --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
