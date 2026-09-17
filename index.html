@@ -78,8 +78,10 @@
 </head>
 <body class="bg-stone-100 xl:p-10 p-0 align-middle">
     <header class="container p-8 text-left text-kabel site-header">
-        <a href="/" class="text-5xl whitespace-nowrap" aria-label="Norrmalms Ljudteknik, startsida"><h1><span class="text-white-600">Norrmalms</span><span class="block"><span class="bg-red-400 inline-block mr-1.5 overflow-clip text-red-400">&nbsp; <span class="text-stone-100 bg-stone-100 inline-block mr-1 w-2 rotate-133">O</span><span class="not-visible">-</span></span>Ljudteknik</span></h1></a>
-        <p class="site-tagline">Ljudteknik · Stockholm</p>
+        <span class="header">
+            <a href="/" class="text-5xl whitespace-nowrap" aria-label="Norrmalms Ljudteknik, startsida"><h1><span class="text-white-600">Norrmalms</span><span class="block"><span class="bg-red-400 inline-block mr-1.5 overflow-clip text-red-400">&nbsp; <span class="text-stone-100 bg-stone-100 inline-block mr-1 w-2 rotate-133">O</span><span class="not-visible">-</span></span>Ljudteknik</span></h1></a>
+            <p class="site-tagline">Ljudteknik · Stockholm</p>
+        </span>
     </header>
     <main>
     <section class="container p-8 bg-white shadow service-panel" aria-labelledby="services-title">
@@ -90,7 +92,7 @@
             <li>Ljudbearbetning</li>
             <li>Uthyrning av ljudutrustning</li>
             <li class="flightcase-service">
-                <span class="flightcase-label">Nytt</span> Tillverkning av måttanpassade flightcase – <a href="mailto:edmark@norrmalms.se?subject=Förfrågan om flightcase">skicka en förfrågan</a>
+                <span class="flightcase-label">Nytt</span> Tillverkning av måttanpassade flightcase – <a href="#contact-form">skicka en förfrågan</a>
                 <div class="flightcase-gallery" aria-label="Bilder från tillverkning av flightcase">
                     <a href="static/images/flightcase/IMG_8646.JPG" aria-label="Visa tillverkning av flightcase i större format">
                         <img src="static/images/flightcase/IMG_8646.JPG" alt="Tillverkning av måttanpassat flightcase" loading="lazy">
@@ -109,9 +111,18 @@
         </ul>
         <h2 id="contact-title">Kontakt</h2>
         <p>För mer information, vänligen kontakta oss via e-post: <a href="mailto:edmark@norrmalms.se" class="text-red-400 underline">edmark@norrmalms.se</a></p>
-        <p>Telefon: <a href="tel:+46767968288" class="text-red-400 underline">076 796-82 88</a></p> 
+        <p>Telefon: <a href="tel:+46767968288" class="text-red-400 underline">076 796-82 88</a></p>
+        <p>Eller <a href="#contact-form" class="text-red-400 underline">fyll i en förfrågan i formuläret nedan</a>.</p>
     </section>
-    <div class="container work-gallery" aria-label="Bilder från vårt arbete"></div>
+    <div class="container work-gallery" aria-label="Bilder från vårt arbete">
+        <figure aria-hidden="true"></figure>
+        <figure aria-hidden="true"></figure>
+        <figure aria-hidden="true"></figure>
+    </div>
+    <section class="container form-panel" id="contact-form" aria-labelledby="form-title">
+        <h2 id="form-title">Kontaktformulär</h2>
+        <iframe class="contact-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdraP49zMI02kdtj0Cryo7VKw5GBSJsjJBg5epizswAmgVY8Q/viewform?embedded=true" height="1200" frameborder="0" marginheight="0" marginwidth="0" title="Kontaktformulär" loading="lazy">Loading…</iframe>
+    </section>
     </main>
     <dialog class="image-overlay" aria-label="Förstorad bild från flightcasetillverkning">
         <button type="button" class="image-overlay-close" aria-label="Stäng bild">×</button>
