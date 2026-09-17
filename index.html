@@ -23,13 +23,54 @@
             <li>FOH-ljudtekniker</li>
             <li>Ljudbearbetning</li>
             <li>Uthyrning av ljudutrustning</li>
+            <li class="flightcase-service"><span class="flightcase-label">Nytt</span> Tillverkning av måttanpassade flightcase – <a href="mailto:edmark@norrmalms.se?subject=Förfrågan om flightcase">skicka en förfrågan</a></li>
         </ul>
         <h2>Kontakt</h2>
         <p>För mer information, vänligen kontakta oss via e-post: <a href="mailto:edmark@norrmalms.se" class="text-red-400 underline">edmark@norrmalms.se</a></p>
         <p>Telefon: <a href="tel:+46 76 796-82 88" class="text-red-400 underline">076 796-82 88</a></p> 
     </div>
-    <div class="container h-92 xl:my-8 py-8 overflow-clip text-center shadow">
-        <img src="static/IMG_5261.jpg" alt="Norrmalms Ljudteknik Logo"  width="896" height="364" alt="Norrmalms Ljudteknik - NS10 Studio Monitor">
-    </div>
+    <div class="container work-gallery" aria-label="Bilder från vårt arbete"></div>
+    <script>
+        const gallery = document.querySelector('.work-gallery');
+        const images = [
+            { src: 'static/images/DSC08747.jpg', width: 6060, height: 4040 },
+            { src: 'static/images/DSC08820.jpg', width: 5960, height: 3973 },
+            { src: 'static/images/DSC08888.jpg', width: 6192, height: 4128 },
+            { src: 'static/images/IMG_2878.jpg', width: 3912, height: 2934 },
+            { src: 'static/images/IMG_4729.jpg', width: 2952, height: 2214 },
+            { src: 'static/images/IMG_5107.JPG', width: 5712, height: 4284 },
+            { src: 'static/images/IMG_5261.jpg', width: 4032, height: 3024 },
+            { src: 'static/images/IMG_5334.jpg', width: 5712, height: 4284 },
+            { src: 'static/images/portrait/IMG_5619.JPG', width: 4032, height: 3024 },
+            { src: 'static/images/portrait/DSC08896.jpg', width: 4128, height: 6192 },
+            { src: 'static/images/portrait/IMG_0251.jpg', width: 3024, height: 4032 },
+            { src: 'static/images/portrait/IMG_0567.JPG', width: 5712, height: 4284 },
+            { src: 'static/images/portrait/IMG_2273.JPG', width: 4032, height: 3024 },
+            { src: 'static/images/portrait/IMG_2874.JPG', width: 4032, height: 3024 },
+            { src: 'static/images/portrait/IMG_5277.JPG', width: 4032, height: 3024 },
+            { src: 'static/images/portrait/IMG_8229.JPG', width: 3666, height: 2750 }
+        ];
+
+        for (let index = images.length - 1; index > 0; index--) {
+            const randomIndex = Math.floor(Math.random() * (index + 1));
+            [images[index], images[randomIndex]] = [images[randomIndex], images[index]];
+        }
+
+        const selectedImages = images.slice(0, 3).map(({ src, width, height }) => {
+            const figure = document.createElement('figure');
+            const image = document.createElement('img');
+
+            image.src = src;
+            image.alt = 'Bild från vårt arbete';
+            image.width = width;
+            image.height = height;
+            image.loading = 'lazy';
+            figure.append(image);
+
+            return figure;
+        });
+
+        gallery.replaceChildren(...selectedImages);
+    </script>
 </body>
 </html>
