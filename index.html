@@ -85,7 +85,23 @@
             <li>FOH-ljudtekniker</li>
             <li>Ljudbearbetning</li>
             <li>Uthyrning av ljudutrustning</li>
-            <li class="flightcase-service"><span class="flightcase-label">Nytt</span> Tillverkning av måttanpassade flightcase – <a href="mailto:edmark@norrmalms.se?subject=Förfrågan om flightcase">skicka en förfrågan</a></li>
+            <li class="flightcase-service">
+                <span class="flightcase-label">Nytt</span> Tillverkning av måttanpassade flightcase – <a href="mailto:edmark@norrmalms.se?subject=Förfrågan om flightcase">skicka en förfrågan</a>
+                <div class="flightcase-gallery" aria-label="Bilder från tillverkning av flightcase">
+                    <a href="static/images/flightcase/IMG_8646.JPG" aria-label="Visa tillverkning av flightcase i större format">
+                        <img src="static/images/flightcase/IMG_8646.JPG" alt="Tillverkning av måttanpassat flightcase" loading="lazy">
+                    </a>
+                    <a href="static/images/flightcase/IMG_8650.JPG" aria-label="Visa detaljarbete på flightcase i större format">
+                        <img src="static/images/flightcase/IMG_8650.JPG" alt="Detaljarbete under tillverkning av flightcase" loading="lazy">
+                    </a>
+                    <a href="static/images/flightcase/IMG_8762.JPG" aria-label="Visa flightcasetillverkning i större format">
+                        <img src="static/images/flightcase/IMG_8762.JPG" alt="Arbete med tillverkning av flightcase" loading="lazy">
+                    </a>
+                    <a href="static/images/flightcase/IMG_8763.JPG" aria-label="Visa flightcasedetaljer i större format">
+                        <img src="static/images/flightcase/IMG_8763.JPG" alt="Detaljer på ett måttanpassat flightcase" loading="lazy">
+                    </a>
+                </div>
+            </li>
         </ul>
         <h2 id="contact-title">Kontakt</h2>
         <p>För mer information, vänligen kontakta oss via e-post: <a href="mailto:edmark@norrmalms.se" class="text-red-400 underline">edmark@norrmalms.se</a></p>
@@ -93,7 +109,31 @@
     </section>
     <div class="container work-gallery" aria-label="Bilder från vårt arbete"></div>
     </main>
+    <dialog class="image-overlay" aria-label="Förstorad bild från flightcasetillverkning">
+        <button type="button" class="image-overlay-close" aria-label="Stäng bild">×</button>
+        <img class="image-overlay-image" alt="">
+    </dialog>
     <script>
+        const flightcaseGallery = document.querySelector('.flightcase-gallery');
+        const imageOverlay = document.querySelector('.image-overlay');
+        const overlayImage = imageOverlay.querySelector('.image-overlay-image');
+
+        flightcaseGallery.addEventListener('click', (event) => {
+            const link = event.target.closest('a');
+            if (!link) return;
+
+            event.preventDefault();
+            const thumbnail = link.querySelector('img');
+            overlayImage.src = link.href;
+            overlayImage.alt = thumbnail.alt;
+            imageOverlay.showModal();
+        });
+
+        imageOverlay.querySelector('.image-overlay-close').addEventListener('click', () => imageOverlay.close());
+        imageOverlay.addEventListener('click', (event) => {
+            if (event.target === imageOverlay) imageOverlay.close();
+        });
+
         const gallery = document.querySelector('.work-gallery');
         const images = [
             { src: 'static/images/DSC08747.jpg', width: 6060, height: 4040 },
