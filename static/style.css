@@ -2779,6 +2779,9 @@ h2 {
 .flightcase-service {
   margin-top: 0;
 }
+.contact-form {
+  width: 100%
+}
 .flightcase-label {
   display: inline-block;
   margin-right: 0.35rem;
