@@ -6,6 +6,11 @@
   padding: 0;
   border: 0 solid;
 }
+img {
+  image-rendering: -webkit-optimize-contrast; /* Forces sharper, cleaner interpolation */
+  image-rendering: high-quality;
+  transform: translateZ(0); /* Forces GPU layer separation to stabilize pixel snapping */
+}
 html, :host {
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
