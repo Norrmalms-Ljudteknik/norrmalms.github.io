@@ -2723,7 +2723,7 @@ body::before {
   z-index: 20;
   height: 4px;
   content: "";
-  background: linear-gradient(45deg, var(--coral) 0 0%, var(--muted) 100% 100%);
+  background: var(--coral);
 }
 ::selection {
   color: var(--ink);
